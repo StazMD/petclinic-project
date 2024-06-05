@@ -2,11 +2,6 @@ pipeline {
     agent any
     
     stages{
-	stage('Install Maven') {
-            steps {
-                sh 'apt-get update && apt-get install -y maven'
-            }
-        }
 		
         stage("Compile"){
             steps{
