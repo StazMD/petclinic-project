@@ -1,11 +1,14 @@
 pipeline {
     agent any
-    tools{
-        jdk 'Java 17'
-        maven 'Maven 3.8.1'
-    }
+    
 
     stages{
+		stage('Install Maven') {
+            steps {
+                sh 'apt-get update && apt-get install -y maven'
+            }
+        }
+		
         stage("Compile"){
             steps{
                 sh "mvn clean compile"
