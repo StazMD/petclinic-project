@@ -1,13 +1,6 @@
 pipeline {
     agent any
-<<<<<<< HEAD
     
-=======
-    tools{
-        jdk 'jdk'
-        maven 'mvn'
-    }
->>>>>>> dd40e7b9e00739c7d704e5741947ec186b47766a
 
     stages{
 		stage('Install Maven') {
